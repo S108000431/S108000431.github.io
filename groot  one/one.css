@@ -1,0 +1,145 @@
+/*圖案log*/
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+@import url("https://upload.cc/i1/2022/05/19/8wqOVE.jpg");
+@import url("https://upload.cc/i1/2022/05/19/DXqs3J.jpg");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box }
+
+/*body*/
+.bod{ 
+  min-height: 100vh; 
+  padding: 2rem 0px 250px 0px; 
+  /*background-color: #E5E6EB;*/ 
+  display: grid; 
+  /*place-items: center;*/ 
+  text-align: center; 
+  background-image:url("https://upload.cc/i1/2022/05/19/DXqs3J.jpg");
+  background-repeat: no-repeat;/*不重複*/
+  background-size: cover; /*滿頻*/
+}
+
+body {
+  color:rgb(211, 221, 217);
+ 
+}   
+
+img { max-width: 100%
+}
+
+.bod2{ /*區域性bod*/
+  min-height: 100vh; 
+  padding: 2rem 0px 250px 0px; 
+  /*background-color: #E5E6EB; */
+  display: grid; 
+  text-align: center; 
+  place-items:center stretch;
+  
+  /*background-image: radial-gradient(circle at top left, transparent 25%, rgb(0 0 0 / .25))*/
+  background-image:url("https://upload.cc/i1/2022/05/19/8wqOVE.jpg");
+  background-repeat: no-repeat;/*不重複*/
+  background-size: cover; /*滿頻*/
+ }
+
+ .padd{ /*整體高寬*/
+  padding: 0px 0px 250px 0px;
+}
+ul{/*至中排列*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2rem;
+  list-style: none;
+}
+
+.card {/*整體顏色外觀*/
+  
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  height: 15rem;
+  max-width: 15rem;
+  max-height: 20rem;
+  text-align: center;
+  --iconS: 6rem;
+  --iconOffsetX: calc(var(--iconS) / 4);
+  --iconOffsetY: calc(var(--iconS) / 2.5);
+  margin-top: var(--iconOffsetY);
+  margin-inline: var(--iconOffsetX);
+  border-radius: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #fff;
+  --shadowSurface: 0.5rem 0.5rem 0.5rem rgb(0 0 0 / .25);
+  --bgGradient: radial-gradient(circle at bottom right, transparent, rgb(0 0 0 / .1));
+  background-image:
+    radial-gradient( circle at 
+        calc(var(--iconOffsetX) * -1 + var(--iconS) / 2) 
+        calc(var(--iconOffsetY) * -1 + var(--iconS) / 2), 
+      rgb(0 0 0 / .4) calc(var(--iconS) / 2), 
+      transparent calc(var(--iconS) / 1.6)
+    ),
+    radial-gradient( circle at 
+        calc(var(--iconOffsetX) * -1 + var(--iconS) / 2)
+        calc(var(--iconOffsetY) * -1 + var(--iconS) / 2),
+      var(--accent-color) calc(var(--iconS) / 1.4),
+      transparent calc(var(--iconS) / 1.4 + 1px)
+    ),
+    var(--bgGradient);
+  --shadowInsetLight: inset 0.125rem 0.125rem 0.125rem rgb(255 255 255 / .5);
+  --shadowInsetDark: inset -0.067rem -0.067rem 0.067rem rgb(0 0 0 / .5);
+  box-shadow: 
+    var(--shadowInsetLight),
+    var(--shadowInsetDark),
+    var(--shadowSurface)   
+  
+}
+.card .icon {/*頭頂圖案*/
+  width: var(--iconS);
+  aspect-ratio: 1;
+  margin-top: calc(var(--iconOffsetY) * -1);
+  margin-left: calc(var(--iconOffsetX) * -1);
+  margin-bottom: calc(var(--iconS) / 4);
+  display: grid;
+  place-items: center;
+  color: var(--accent-color);
+  font-size: calc(var(--iconS) / 3);
+  background-color: inherit;
+  border-radius: 50%;
+  box-shadow:
+    var(--shadowInsetLight),
+    var(--shadowInsetDark);
+  background-image: var(--bgGradient);
+  
+}
+.card .title{ /*內部文字大小*/
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-align: center;
+  text-transform: uppercase
+}
+.card .content{/*內部文字間距*/
+  padding: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.9em
+}
+
+/*--------=毛玻璃----------*/
+.glassmorphism {
+  backdrop-filter: blur(5px) saturate(170%);
+  -webkit-backdrop-filter: blur(10px) saturate(170%);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+
+}
+
+.tablee{
+ border-spacing:100px
+ 
+}
